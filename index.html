@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Globo.com</title>
+    <style>
+        /* 1. Criamos um container pai para centralizar tudo na tela */
+        .main-container {
+            width: 100%;
+            max-width: 1000px; /* Largura total do site, ajuste se quiser maior ou menor */
+            margin: 0 auto;    /* Centraliza o bloco inteiro na horizontal */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .banner-container {
+            position: relative;
+            width: 100%; /* Ocupa 100% do main-container */
+        }
+
+        .imagem-fundo {
+            width: 100%;
+            display: block;
+        }
+
+        .texto-sobreposto {
+            position: absolute;
+            bottom: 0; /* Gruda no fundo para o degradê começar debaixo */
+            left: 0;
+            right: 0;
+            padding: 40px 20px 20px 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+            /* Adicionamos um degradê para o texto branco nunca sumir na foto */
+            background: linear-gradient(transparent, rgba(0,0,0,0.8)); 
+        }
+
+        h1 {
+            font-size: 32px; /* Aumentei um pouco para dar destaque */
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .barra-noticias {
+            background-color: #c4170c;
+            display: flex;
+            width: 100%; /* Garante que tenha a mesma largura da imagem acima */
+            box-sizing: border-box; /* Evita que o padding "estique" a div */
+            justify-content: space-between;
+            padding: 20px 10px;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+
+        .noticia-item {
+            display: flex;
+            flex: 1;
+            padding: 0 15px;
+            line-height: 1.4;
+            /* Adiciona uma linha divisória sutil entre as notícias */
+            border-right: 1px solid rgba(255,255,255,0.2); 
+        }
+
+        /* Remove a linha da última notícia */
+        .noticia-item:last-child {
+            border-right: none;
+        }
+
+        .ponto {
+            margin-right: 8px;
+            font-size: 20px;
+            color: #ff9999;
+            line-height: 1;
+        }
+
+        .noticia-item p {
+            margin: 0;
+            font-weight: bold;
+        }
+	
+	.linha{
+	    color: #f5f5f5;
+	}
+	
+        .noticia-fotos {
+    display: flex;            /* Coloca as fotos lado a lado */
+    width: 100%;              /* Ocupa a mesma largura do container principal */
+    gap: 15px;                /* Cria um espaço entre as fotos */
+    margin-top: 20px;         /* Afasta um pouco da barra vermelha acima */
+    box-sizing: border-box;
+}
+
+.foto-item {
+    flex: 1;                  /* Faz com que as 3 fotos tenham o mesmo tamanho */
+    display: flex;
+    flex-direction: column;   /* Empilha imagem e texto da legenda */
+}
+
+.foto-item img {
+    width: 100%;              /* A imagem ocupa todo o espaço do item */
+    height: 180px;            /* Define uma altura fixa para todas ficarem iguais */
+    object-fit: cover;        /* Corta a imagem para preencher o espaço sem distorcer */
+    border-radius: 4px;       /* Arredondamento leve opcional */
+}
+
+.foto-item p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 8px;
+    line-height: 1.2;
+}
+.barra-noticias2 {
+            display: flex;
+            width: 100%; /* Garante que tenha a mesma largura da imagem acima */
+            box-sizing: border-box; /* Evita que o padding "estique" a div */
+            justify-content: space-between;
+            color: #919191;
+            padding: 20px 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Container que segura tudo junto -->
+    <div class="main-container">
+
+        <div class="banner-container">
+            <img src="C:\Users\aluno\Documents\SITEGLOBO\politicos.png" alt="Trump e Político" class="imagem-fundo">
+            
+            <div class="texto-sobreposto">
+                <h1>Trump afirma que 'tudo foi destruído' no Irã e promete 3ª onda de ataques</h1>
+            </div>
+        </div>
+
+        <div class="barra-noticias">
+            <div class="noticia-item">
+                <span class="ponto">•</span>
+                <p>Israel ataca reunião que definiria o novo líder do Irã, diz jornal</p>
+            </div>
+
+            <div class="noticia-item">
+                <span class="ponto">•</span>
+                <p>Agência: estrondos são ouvidos em Dubai, Abu Dhabi e Doha; SIGA</p>
+            </div>
+
+            <div class="noticia-item">
+                <span class="ponto">•</span>
+                <p>General do Irã ameaça centros econômicos do Oriente Médio</p>
+            </div>
+        </div>
+
+	<div class="linha">___________________________________________________________________________________________________________________________</div>
+	<div class="noticia-fotos">
+           <div class="foto-item">
+           <img src="C:\Users\aluno\Documents\SITEGLOBO\trump.png">
+           <h2 style="color: #c4170c; font-family: Arial, sans-serif; font-size: 30px; margin-top: 20px;">Multirão no Irã vai a funeral de crianças; ONU pede apuração</h2>
+           </div>
+           <div class="foto-item">
+           <img src="C:\Users\aluno\Documents\SITEGLOBO\pessoas.png">
+           <h2 style="color: #c4170c; font-family: Arial, sans-serif; font-size: 30px; margin-top: 20px;">Trump ameaça usar bases da Espanha sem autorização</h2>
+           </div>
+           <div class="foto-item">
+            <img src="C:\Users\aluno\Documents\SITEGLOBO\aviao.png">
+            <h2 style="color: #c4170c; font-family: Arial, sans-serif; font-size: 30px; margin-top: 20px;">
+    Valores da guerra:<br> drones de US$ 20 mil x mísseis de US$ 4 mi
+</h2>
+            </div>
+       </div>
+
+          <div class="barra-noticias2">
+            <div class="noticia-item">
+                <span class="ponto">•</span>
+                <p>Escalada nuclear pode ser<br> fatal, diz especialista</p>
+            </div>
+
+            <div class="noticia-item">
+                <span class="ponto">•</span>
+                <p>O que está por trás do<br> conflito entre EUA e Irã?</p>
+            </div>
+
+            <div class="noticia-item">
+                <span class="ponto">•</span>
+                <p>Emirados criam corredor<br> de segurança para voos</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
